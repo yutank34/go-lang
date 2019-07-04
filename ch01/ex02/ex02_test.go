@@ -1,4 +1,4 @@
-package ex02
+package main
 
 import (
 	"bytes"

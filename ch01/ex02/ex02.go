@@ -1,5 +1,5 @@
 // コマンドライン引数のインデックスと値を1行ずつ表示する
-package ex02
+package main
 
 import (
 	"fmt"
