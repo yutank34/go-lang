@@ -31,10 +31,14 @@ func main() {
 	}
 }
 
-func countLines(f *os.File, counts map[string]int, fnames map[string][]string) {
+func countLines(f *os.File, counts map[string]int, fnames map[string][]string) *map[string][]string {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
 		t := input.Text()
+
+		if t == "exit" {
+			break
+		}
 		counts[t]++
 		f := f.Name()
 		names := fnames[t]
@@ -45,6 +49,7 @@ func countLines(f *os.File, counts map[string]int, fnames map[string][]string) {
 		fnames[t] = names
 	}
 	// TODO: input.Err()のからのエラー処理
+	return &fnames
 }
 
 func contain(a []string, s string) bool {

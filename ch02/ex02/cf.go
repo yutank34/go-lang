@@ -22,6 +22,7 @@ func main() {
 				os.Exit(1)
 			}
 			print(*types, f)
+			os.Exit(0)
 		}
 	}
 	cs := bufio.NewScanner(os.Stdin)
@@ -48,7 +49,7 @@ func print(t string, i float64) {
 		printTemp(i)
 	default:
 		fmt.Println("オプションが適切ではありません")
-		os.Exit(1)
+		os.Exit(0)
 	}
 }
 
