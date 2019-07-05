@@ -10,7 +10,7 @@ func FToC(f Fahrenheit) Celsius { return Celsius((f - 32) * 5 / 9) }
 func CToK(c Celsius) Kelvin { return Kelvin(c + 273) }
 
 // 絶対温度を摂氏に変換
-func KToC(k Kelvin) Celsius { return Celsius(k - 237) }
+func KToC(k Kelvin) Celsius { return Celsius(k - 273) }
 
 // 華氏を絶対温度に変換
 func FToK(f Fahrenheit) Kelvin { return CToK(FToC(f)) }
