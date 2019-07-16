@@ -46,23 +46,29 @@ func makeInputs() []uint64 {
 	return ints
 }
 
+var input uint64 = 111111
+var output int
+
 func BenchmarkPopCountV2(b *testing.B) {
-	var tests = makeInputs()
-	for _, v := range tests {
-		PopCountV2(v)
+	temp := 0
+	for i := 0; i < b.N; i++ {
+		temp += PopCountV2(input)
 	}
+	output = temp
 }
 
 func BenchmarkPopCountV3(b *testing.B) {
-	var tests = makeInputs()
-	for _, v := range tests {
-		PopCountV3(v)
+	temp := 0
+	for i := 0; i < b.N; i++ {
+		temp += PopCountV3(input)
 	}
+	output = temp
 }
 
 func BenchmarkPopCountV4(b *testing.B) {
-	var tests = makeInputs()
-	for _, v := range tests {
-		PopCountV4(v)
+	temp := 0
+	for i := 0; i < b.N; i++ {
+		temp += PopCountV4(input)
 	}
+	output = temp
 }
