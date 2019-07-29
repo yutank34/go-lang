@@ -81,7 +81,7 @@ func surface(out io.Writer, p RequestParam) {
 			bx, by := corner(i, j, s)
 			cx, cy := corner(i, j+1, s)
 			dx, dy := corner(i+1, j+1, s)
-			fmt.Fprintf(out, "<polygon points='%g, %g, %g, %g, %g, %g, %g, %g' style='fill:#%s'/>\n", ax, ay, bx, by, cx, cy, dx, dy, s.color)
+			fmt.Fprintf(out, "<polygon points='%g, %g, %g, %g, %g, %g, %g, %g' style='fill:%s'/>\n", ax, ay, bx, by, cx, cy, dx, dy, s.color)
 		}
 	}
 	fmt.Fprintln(out, "</svg>")
