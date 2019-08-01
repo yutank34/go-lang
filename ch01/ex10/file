@@ -19,3 +19,17 @@
 0.45s    4154 http://gopl.io
 0.68s    8158 https://golang.org
 0.99s    6833 https://godoc.org
+0.62s    8158 https://golang.org
+0.71s    6835 https://godoc.org
+0.77s    4154 http://gopl.io
+0.16s    4154 http://gopl.io
+0.42s    8158 https://golang.org
+0.52s    6835 https://godoc.org
+0.25s    4154 http://gopl.io
+0.41s    8158 https://golang.org
+0.53s    6835 https://godoc.org
+0.24s    4154 http://gopl.io
+0.59s    8158 https://golang.org
+0.86s    6835 https://godoc.org
+1.29s   26631 http://ayataka.jp/
+0.47s   26631 http://ayataka.jp/
