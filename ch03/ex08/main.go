@@ -10,7 +10,8 @@ import (
 )
 
 const (
-	xmin, ymin, xmax, ymax = -2, -2, +2, +2
+	base                   = 0.5
+	xmin, ymin, xmax, ymax = -base, -base, +base, +base
 	width, height          = 1024, 1024
 )
 
@@ -153,11 +154,11 @@ func (z *RatComplex) Mul(x, y *RatComplex) *RatComplex {
 	return z
 }
 
-func (z *RatComplex) Abs(x *RatComplex) *big.Rat {
-	return new(big.Rat).Sqrt(
-		new(big.Rat).Add(
-			new(big.Rat).Mul(x.real, x.real),
-			new(big.Rat).Mul(x.imag, x.imag),
-		),
-	)
-}
+// func (z *RatComplex) Abs(x *RatComplex) *big.Rat {
+// 	return new(big.Rat).Sqrt(
+// 		new(big.Rat).Add(
+// 			new(big.Rat).Mul(x.real, x.real),
+// 			new(big.Rat).Mul(x.imag, x.imag),
+// 		),
+// 	)
+// }
