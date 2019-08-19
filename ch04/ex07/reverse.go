@@ -26,7 +26,7 @@ func getSize(s byte) int {
 		size = 2
 	} else if s&(1<<6) != 0 && s&(1<<5) != 0 && s&(1<<4) == 0 {
 		size = 3
-	} else if s&(1<<6) != 0 && s&(1<<5) != 0 && s&(1<<4) != 0 && s&(1<<3) != 0 {
+	} else if s&(1<<6) != 0 && s&(1<<5) != 0 && s&(1<<4) != 0 && s&(1<<3) == 0 {
 		size = 4
 	} else {
 		fmt.Print("error")

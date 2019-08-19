@@ -11,6 +11,7 @@ func TestReverse(t *testing.T) {
 		want  []byte
 	}{
 		{[]byte("お腹すいた"), []byte("たいす腹お")},
+        {[]byte("😥e→😃世:)"),[]byte("):世😃→e😥")},
 	}
 
 	for _, test := range tests {
