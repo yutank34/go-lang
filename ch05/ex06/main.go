@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"math"
-	"os"
 )
 
 const (
@@ -27,8 +26,7 @@ func main() {
 			cx, cy, cok := corner(i, j+1)
 			dx, dy, dok := corner(i+1, j+1)
 			if !aok || !bok || !cok || !dok {
-				fmt.Println("errer")
-				os.Exit(1)
+				continue
 			}
 			fmt.Printf("<polygon points='%g, %g, %g, %g, %g, %g, %g, %g'/>\n", ax, ay, bx, by, cx, cy, dx, dy)
 		}
